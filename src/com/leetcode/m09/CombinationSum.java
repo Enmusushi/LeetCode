@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * 39. 组合总和（每日一题）
+ * 39. 缁勫悎鎬诲拰锛堟瘡鏃ヤ竴棰橈級
  */
 public class CombinationSum {
 	 private List<List<Integer>> ans = new LinkedList<List<Integer>>();
