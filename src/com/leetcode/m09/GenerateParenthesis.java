@@ -7,7 +7,8 @@ public class GenerateParenthesis {
     private StringBuffer buffer = new StringBuffer();
     private List<String> ans = new LinkedList<String>();
     public List<String> generateParenthesis(int n) {
-        generateParenthesisDFS(n, 0, 0, 0);
+        //generateParenthesisDFS(n, 0, 0, 0);
+        generateParenthesisDFS( n, n);
         return ans;
     }
     //初始通过3ms，优化后1ms
@@ -32,7 +33,30 @@ public class GenerateParenthesis {
             buffer.deleteCharAt(buffer.length() - 1);
         }
     }
+    public void generateParenthesisDFS(int left, int right) {
+        if(left<0||right<0)
+        {
+            return;
+        }
+        if(left==0&&right==0){
+            ans.add(buffer.toString());
+            buffer.delete(0,buffer.length());
+        }
+        if ( left > right){
+            return;
+        }else if (right == left){
+            buffer.append('(');
+            generateParenthesisDFS(left-1,right);
+        }else if(left < right){
+            if(left>0){
+                buffer.append('(');
+                generateParenthesisDFS(left-1,right);
+            }
+            buffer.append(')');
+            generateParenthesisDFS(left,right-1);
+        }
 
+    }
     public static void main(String[] args) {
         GenerateParenthesis generateParenthesis = new GenerateParenthesis();
         System.out.println(generateParenthesis.generateParenthesis(3));
