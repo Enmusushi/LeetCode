@@ -2,7 +2,9 @@ package com.leetcode.m09;
 
 import java.util.LinkedList;
 import java.util.List;
-
+/**
+ * 22. 括号生成
+ */
 public class GenerateParenthesis {
     private StringBuffer buffer = new StringBuffer();
     private List<String> ans = new LinkedList<String>();
