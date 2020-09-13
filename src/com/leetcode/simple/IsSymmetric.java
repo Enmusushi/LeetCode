@@ -10,24 +10,8 @@ import java.util.List;
  *
  */
 
-//思路，中序遍历
 public class IsSymmetric {
 	private List<List<Integer>> ansList = new LinkedList<List<Integer>>();
-
-	/*
-	 * public boolean isSymmetric(TreeNode root) { Queue<TreeNode> queue = new
-	 * LinkedList<TreeNode>(); List<Integer> temp = new ArrayList<Integer>();
-	 * TreeNode node = null; if (root != null) { queue.offer(root); } while
-	 * (!queue.isEmpty()) { int size = queue.size(); while (size > 0) { node =
-	 * queue.poll(); temp.add(node.val); if (node.left != null) {
-	 * queue.offer(node.left); } if (node.right != null) { queue.offer(node.right);
-	 * } size--; } ansList.add(new ArrayList<Integer>(temp));
-	 * 
-	 * for (int i = 0; i < temp.size() / 2; i++) { if (temp.get(i) !=
-	 * temp.get(temp.size() - i - 1)) { return false; } }
-	 * 
-	 * temp.clear(); } return true; }
-	 */
 	
 	//1ms 29.30%
 	public boolean isSymmetric2(TreeNode root) {

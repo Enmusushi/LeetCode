@@ -1,18 +1,29 @@
-package com.algorithm.test;
-
-
+package com.leetcode.simple;
 public class VisitTree {
-	
-	//Ê÷µÄ±éÀú
-	public void dfs(TreeNode root) {
+	public void dfs_Front(TreeNode root) {
 		if(root==null) {
 			return;
 		}
-		dfs(root.left);
 		System.out.print(root.val+" ");
-		dfs(root.right);
+		dfs_Front(root.left);
+		dfs_Front(root.right);
 	}
-	
+	public void dfs_Middle(TreeNode root) {
+		if(root==null) {
+			return;
+		}
+		dfs_Middle(root.left);
+		System.out.print(root.val+" ");
+		dfs_Middle(root.right);
+	}
+	public void dfs_Rear(TreeNode root) {
+		if(root==null) {
+			return;
+		}
+		dfs_Rear(root.left);
+		dfs_Rear(root.right);
+		System.out.print(root.val+" ");
+	}
 	public static void main(String[] args) {
 		TreeNode root = new TreeNode(1);
 		TreeNode left1 = new TreeNode(2);
@@ -28,6 +39,10 @@ public class VisitTree {
 		right1.left = right3;
 		right1.right = right2;
 		VisitTree test = new VisitTree();
-		test.dfs(root);
+		test.dfs_Front(root);
+		System.out.println();
+		test.dfs_Middle(root);
+		System.out.println();
+		test.dfs_Rear(root);
 	}
 }
