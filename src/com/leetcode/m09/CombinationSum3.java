@@ -3,7 +3,11 @@ package com.leetcode.m09;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-
+/**
+ * 216. 组合总和 III(每日一题，2020-09-11)
+ * @author enmu
+ *
+ */
 public class CombinationSum3 {
     private List<List<Integer>> ans = new LinkedList<>();
     private List<Integer> temp = new ArrayList<>();
@@ -33,7 +37,7 @@ public class CombinationSum3 {
 
     public static void main(String[] args) {
         CombinationSum3 test = new CombinationSum3();
-        System.out.println(test.combinationSum3(3, 7));
+        System.out.println(test.combinationSum3(2, 7));
     }
 
 }

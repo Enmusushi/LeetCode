@@ -24,9 +24,9 @@ public class PermutePermutationUnique {
     	}else if(temp.size() >nums.length) {
     		return;
     	}
-    	for(int i=index;i<nums.length;i++)
+    	for(int i=0;i<nums.length;i++)
     	{
-    		if(i>index&&nums[i]==nums[i-1]) {
+    		if(i>index&& nums[i]==nums[i-1]) {
     			continue;
     		}
         	temp.add(nums[i]);

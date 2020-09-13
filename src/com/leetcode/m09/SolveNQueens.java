@@ -9,4 +9,7 @@ public class SolveNQueens {
     public void solveNQueensDFS(int n) {
     	
     }
+    public static void main(String[] args) {
+    	SolveNQueens test = new SolveNQueens();
+	}
 }
