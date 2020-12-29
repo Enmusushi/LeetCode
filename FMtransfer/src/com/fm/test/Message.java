@@ -12,6 +12,8 @@ public class Message {
 		jframe.setSize(400, 500);
 		jframe.setVisible(true);
 		JPanel panel = new JPanel();
+		//JOptionPane jop = new JOptionPane(new BasicOptionPaneUI());
+		//panel.setUI(new BasicOptionPaneUI());
 		panel.setVisible(true);
 		JButton button = new JButton();
 		button.setText("服务端");
